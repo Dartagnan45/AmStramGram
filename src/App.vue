@@ -1,32 +1,43 @@
+<script>
+export default {
+  name: "App",
+};
+</script>
+
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+    
+
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+
+body {
+  background-color: #aaf0d1;
+  font-family: "Gloria Hallelujah", cursive;
 }
 
-#nav {
-  padding: 30px;
+h1,
+h2,
+h3,
+h4 {
+  color: #ffcc33;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+p {
+  color: #ff6eff;
+  font-size: 1em;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.button {
+  text-align: center;
+  color: #ff6eff;
+  background-color: #ffcc33;
 }
 </style>
+
+
+
