@@ -1,7 +1,9 @@
 <template>
   <div class="AmStramGram">
     <div class="container">
-      <h1 class="h1">AmStramGram</h1>
+      <router-link to="/">
+        <h1 class="h1">AmStramGram</h1>
+      </router-link>
       <div class="">
         <p class="result" v-if="choices != []">{{ result }}</p>
       </div>
@@ -28,7 +30,7 @@
             v-on:click="addTitle(title)"
             class="btn button"
           >
-            Envoyer
+            Ajouter
           </button>
           <hr />
           <div class="mb-3">
@@ -43,7 +45,7 @@
             />
           </div>
           <button v-on:click="add(option)" type="submit" class="btn button">
-            ajouter
+            Ajouter
           </button>
         </div>
         <div class="offset-4 col-4">
@@ -60,7 +62,7 @@
               <div>
                 <router-link to="/wheel">
                   <button type="submit" class="btn button btn-card">
-                    Envoyer
+                    C'est parti !
                   </button>
                 </router-link>
               </div>
@@ -105,7 +107,7 @@ export default {
         this.title = "";
       }
     },
-    hide: function () {
+    hide: function() {
       this.isDisplay = false;
     },
     add(option) {
@@ -128,8 +130,13 @@ h1 {
   text-align: center;
   margin-top: 2em;
   margin-bottom: 1em;
-  font-size: 5em;
+  font-size: 4em;
   width: 10em;
+  color: black;
+  text-decoration: underline #ff6eff;
+}
+a:link {
+  text-decoration: none;
 }
 
 .result {
@@ -138,8 +145,13 @@ h1 {
   color: #ff6eff;
 }
 
+input {
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+}
+
 .card {
   min-height: 300px;
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
 }
 
 .btn-card {

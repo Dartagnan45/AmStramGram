@@ -56,6 +56,7 @@ span {
   margin-bottom: 30px;
 }
 div.container {
+  height: 400px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -109,17 +110,17 @@ a:hover::before {
   transform-origin: 0% 50%;
 }
 div.imag {
-  height: 300px;
+  max-height: 360px;
   width: 100%;
   background: url("../assets/giphy.gif");
   background-position: center;
-  /* background-size: cover; */
+  background-size: cover;
   background-repeat: no-repeat;
-  margin-left: -50px;
+  margin-left: 0px;
   box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
   border-radius: 20px;
   transform: translateX(-80px);
-  border: 1px;
+  border: none;
 }
 div.text-container {
   margin: 60px 45px 55px;
