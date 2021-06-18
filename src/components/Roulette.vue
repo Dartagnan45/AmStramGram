@@ -4,7 +4,7 @@
     <section id="hero" class="hero">
       <div class="hero-body">
         <div class="container">
-          <router-link to="/">
+          <router-link to="amstramgram">
             <h1 class="title">AmStramGram</h1>
           </router-link>
           <h2 class="subtitle">Laisser faire le destin</h2>

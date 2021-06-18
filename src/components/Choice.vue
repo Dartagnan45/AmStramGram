@@ -8,7 +8,7 @@
         <p class="result" v-if="choices != []">{{ result }}</p>
       </div>
       <div class="row">
-        <div class="col-4">
+        <div class="col-3">
           <h2>Entrez vos différents choix</h2>
           <p>Vous pouvez ajouter autant de choix que vous voulez</p>
           <div v-show="title != []" visibility="hide" class="mb-3">
@@ -48,24 +48,28 @@
             Ajouter
           </button>
         </div>
-        <div class="offset-4 col-4">
+         <div class="offset-1 col-2">
+          <router-link to="/wheel">
+            <button
+              v-if="options.length > 1"
+              type="submit"
+              class="btn button btn-card"
+            >
+              C'est parti ?
+            </button>
+          </router-link>
+        </div>
+        <div class="offset-1 col-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">
-                Liste de :
+                Votre liste de :
                 <span v-for="title in titleList" :key="title">{{ title }}</span>
               </h5>
               <p class="card-text">{{ option }}</p>
               <ul v-if="options != []">
                 <li v-for="option in options" :key="option">{{ option }}</li>
               </ul>
-              <div>
-                <router-link to="/wheel">
-                  <button type="submit" class="btn button btn-card">
-                    C'est parti !
-                  </button>
-                </router-link>
-              </div>
               <div v-show="options.length > 0">
                 <button
                   @click="del()"
@@ -127,10 +131,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1 {
-  text-align: center;
+  text-align: left;
   margin-top: 2em;
   margin-bottom: 1em;
-  font-size: 4em;
+  font-size: 3.5em;
   width: 10em;
   color: black;
   text-decoration: underline #ff6eff;
@@ -155,16 +159,23 @@ input {
 }
 
 .btn-card {
-  position: absolute;
-  bottom: 10px;
-  left: 5px;
-  margin: 10px;
+  position: fixed;
+  top: 40%;
+  width:100px;
+  height:100px;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 100%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-card-1 {
   position: absolute;
   bottom: 10px;
-  right: 5px;
+  left: 5px;
   margin: 10px;
 }
 </style>

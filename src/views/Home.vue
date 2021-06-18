@@ -35,19 +35,23 @@ export default {
   transition: 0.33s ease all;
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
 }
+
 html {
   box-sizing: border-box;
 }
+
 .home {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 span {
   display: inline-block;
   width: 50px;
@@ -55,6 +59,7 @@ span {
   background-color: #ff3434;
   margin-bottom: 30px;
 }
+
 div.container {
   height: 400px;
   background-color: white;
@@ -71,11 +76,13 @@ h1 {
   font-size: 36px;
   margin: 0 0 15px;
 }
+
 p {
   font-weight: 300;
   line-height: 24px;
   margin: 0 0 30px 0;
 }
+
 a {
   text-decoration: none;
   text-transform: uppercase;
@@ -109,6 +116,7 @@ a:hover::before {
   transform: scale3d(1, 1, 1);
   transform-origin: 0% 50%;
 }
+
 div.imag {
   max-height: 360px;
   width: 100%;
@@ -117,14 +125,16 @@ div.imag {
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: 0px;
-  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
   border-radius: 20px;
   transform: translateX(-80px);
   border: none;
 }
+
 div.text-container {
   margin: 60px 45px 55px;
 }
+
 @media screen and (min-width: 768px) {
   div.container {
     flex-direction: row;
